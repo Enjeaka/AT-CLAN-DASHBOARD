@@ -100,7 +100,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
   border-radius: 10px;
   padding: 12px 4px;
   font-weight: 700;
-  font-size: .9rem;
+  font-size: .85rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -108,7 +108,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 6px;
   background: #ffffff !important;
   border: 1px solid var(--border-color);
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -428,7 +428,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
 
   .custom-nav-container { padding: 0; gap: 7px; }
   .custom-nav-row { gap: 5px; }
-  .custom-nav-row .nav-link { font-size: .75rem; padding: 10px 2px; gap: 4px; }
+  .custom-nav-row .nav-link { font-size: .72rem; padding: 10px 2px; gap: 4px; }
   .filter-pills { gap: 1px; }
   .btn-filter { font-size: .78rem; padding: 9px 11px; }
   .table-container { padding: 12px; }
@@ -483,7 +483,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
             Aussie Tackle Clan Dashboard
           </h2>
           <p class="text-slate-600 text-sm sm:text-base leading-relaxed" style="font-size: 0.95rem;">
-            Welcome to the Aussie Tackle community hub! Select an official division below to look up active member records, wood donations, monster archives, and live battle statistics.
+            Welcome to the Aussie Tackle community hub! Select an official division below to look up active member records, monument contributions, totem contributions, and live battle statistics.
           </p>
         </div>
 
@@ -500,7 +500,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
               <img src="https://lh3.googleusercontent.com/d/1k92AuoJ08vSdniVl6oHAjEOmz8it6Hek" alt="Clan Logo" class="clan-logo-img shadow-md" style="width: 58px; height: 58px;">
             </div>
             <div class="text-start">
-              <h2 class="clan-title" id="currentClanTitle">AUSSIE TACKLE CLAN DASHBOARD</h2>
+              <h2 class="clan-title" id="currentClanTitle">AUSSIE TACKLE CLAN DATABASE</h2>
               <div class="clan-subtitle">Creatures of the Deep</div>
             </div>
           </div>
@@ -545,12 +545,12 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
             <ul class="custom-nav-row">
               <li class="nav-item">
                 <button class="nav-link" data-pane="wood-pane">
-                  <i class="fa-solid fa-tree"></i> Wood Score
+                  <i class="fa-solid fa-tree"></i> Unity Monument
                 </button>
               </li>
               <li class="nav-item">
                 <button class="nav-link" data-pane="monster-pane">
-                  <i class="fa-solid fa-ghost"></i> Monster Score
+                  <i class="fa-solid fa-ghost"></i> Totem Contributions
                 </button>
               </li>
               <li class="nav-item">
@@ -581,13 +581,13 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
           <div class="row g-3 justify-content-center">
             <div class="col-12 col-lg-10">
               <div class="table-container shadow-sm">
-                <h5 class="text-amber-700 fw-bold mb-3"><i class="fa-solid fa-trophy me-2"></i>Top 3 Wood Donators</h5>
+                <h5 class="text-amber-700 fw-bold mb-3"><i class="fa-solid fa-trophy me-2"></i>Top 3 Unity Monument Contributors</h5>
                 <div id="overview-top-wood">Memuat data...</div>
               </div>
             </div>
             <div class="col-12 col-lg-10">
               <div class="table-container shadow-sm">
-                <h5 class="text-cyan-700 fw-bold mb-3"><i class="fa-solid fa-skull me-2"></i>Top 3 Monster Hunters</h5>
+                <h5 class="text-cyan-700 fw-bold mb-3"><i class="fa-solid fa-skull me-2"></i>Top 3 Totem Contributors</h5>
                 <div id="overview-top-monster">Memuat data...</div>
               </div>
             </div>
@@ -636,7 +636,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
 
           <div class="table-container shadow-sm">
             <div class="table-header-title-box">
-              <div class="table-header-title" id="wood-table-title"><i class="fa-solid fa-tree text-amber-700"></i> Wood Score Leaderboard - Both</div>
+              <div class="table-header-title" id="wood-table-title"><i class="fa-solid fa-tree text-amber-700"></i> Unity Monument Leaderboard - Both</div>
               <div class="table-header-note"><i class="fa-solid fa-circle-info"></i> <span>Note: This leaderboard only tracks currently active clan members. Past members who have left are not included.</span></div>
             </div>
             <div class="table-responsive desktop-view-only">
@@ -663,7 +663,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
 
           <div class="table-container shadow-sm">
             <div class="table-header-title-box">
-              <div class="table-header-title" id="monster-table-title"><i class="fa-solid fa-ghost text-cyan-700"></i> Monster Score Leaderboard - Both</div>
+              <div class="table-header-title" id="monster-table-title"><i class="fa-solid fa-ghost text-cyan-700"></i> Totem Contributions Leaderboard - Both</div>
               <div class="table-header-note"><i class="fa-solid fa-circle-info"></i> <span>Note: This leaderboard only tracks currently active clan members. Past members who have left are not included.</span></div>
             </div>
             <div class="table-responsive desktop-view-only">
@@ -759,7 +759,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
           <div class="row g-3">
             <div class="col-12 col-md-4">
               <div class="stat-box h-100">
-                <div class="stat-box-title text-amber-700"><i class="fa-solid fa-tree"></i> Wood Donated</div>
+                <div class="stat-box-title text-amber-700"><i class="fa-solid fa-tree"></i> Unity Monument</div>
                 <div class="stat-label-row"><span class="stat-lbl-all">All:</span><span class="fw-bold text-amber-700" id="modal-wood-alltime">0</span></div>
                 <div class="stat-label-row"><span class="stat-lbl-new">New:</span><span class="fw-bold text-slate-900" id="modal-wood-season">0</span></div>
               </div>
@@ -773,7 +773,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
             </div>
             <div class="col-12 col-md-4">
               <div class="stat-box h-100">
-                <div class="stat-box-title text-cyan-700"><i class="fa-solid fa-dragon"></i> Monster Caught</div>
+                <div class="stat-box-title text-cyan-700"><i class="fa-solid fa-dragon"></i> Totem Contributions</div>
                 <div class="stat-label-row"><span class="stat-lbl-all">All:</span><span class="fw-bold text-cyan-700" id="modal-monster-alltime">-</span></div>
                 <div class="stat-label-row"><span class="stat-lbl-new">New:</span><span class="fw-bold text-slate-900" id="modal-monster-season">-</span></div>
               </div>
@@ -781,9 +781,9 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
           </div>
 
           <div class="stat-box mt-3 mb-0">
-            <div class="stat-box-title text-cyan-700 mb-2"><i class="fa-solid fa-ghost"></i> Monsters Caught Detail</div>
+            <div class="stat-box-title text-cyan-700 mb-2"><i class="fa-solid fa-ghost"></i> Totem Contributions Detail</div>
             <div id="modal-monster-breakdown" class="d-flex flex-wrap gap-2">
-              <span class="text-muted small">Tidak ada data monster</span>
+              <span class="text-muted small">Tidak ada data kontribusi</span>
             </div>
           </div>
         </div>
@@ -844,26 +844,26 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
           <div class="row g-2 mb-3">
             <div class="col-6 col-md-3">
               <div class="form-check p-3 bg-slate-50 border rounded-lg">
-                <input class="form-check-input discord-cat" type="checkbox" value="wood" id="chkWood" checked>
-                <label class="form-check-label fw-bold text-slate-800 small" for="chkWood">Wood Score</label>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="form-check p-3 bg-slate-50 border rounded-lg">
-                <input class="form-check-input discord-cat" type="checkbox" value="monster" id="chkMonster" checked>
-                <label class="form-check-label fw-bold text-slate-800 small" for="chkMonster">Monster</label>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="form-check p-3 bg-slate-50 border rounded-lg">
                 <input class="form-check-input discord-cat" type="checkbox" value="battle" id="chkBattle" checked>
                 <label class="form-check-label fw-bold text-slate-800 small" for="chkBattle">Battle Score</label>
               </div>
             </div>
             <div class="col-6 col-md-3">
               <div class="form-check p-3 bg-slate-50 border rounded-lg">
+                <input class="form-check-input discord-cat" type="checkbox" value="wood" id="chkWood" checked>
+                <label class="form-check-label fw-bold text-slate-800 small" for="chkWood">Unity Monument</label>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="form-check p-3 bg-slate-50 border rounded-lg">
+                <input class="form-check-input discord-cat" type="checkbox" value="monster" id="chkMonster" checked>
+                <label class="form-check-label fw-bold text-slate-800 small" for="chkMonster">Totem Contrib</label>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="form-check p-3 bg-slate-50 border rounded-lg">
                 <input class="form-check-input discord-cat" type="checkbox" value="island" id="chkIsland" checked>
-                <label class="form-check-label fw-bold text-slate-800 small" for="chkIsland">Clan Island</label>
+                <label class="form-check-label fw-bold text-slate-800 small" for="chkIsland">Totem Progress</label>
               </div>
             </div>
           </div>
@@ -976,7 +976,6 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
       });
     });
 
-    // Event listener untuk update preview Discord otomatis saat checkbox/radio berubah
     document.querySelectorAll('.discord-cat, .discord-time').forEach(el => {
       el.addEventListener('change', generateDiscordReportText);
     });
@@ -1243,7 +1242,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     islandModal.show();
   }
 
-  // --- DISCORD REPORT GENERATOR FUNCTIONS ---
+  // --- DISCORD REPORT GENERATOR FUNCTIONS (URUTAN SESUAI PERMINTAAN) ---
   function openDiscordReportModal() {
     generateDiscordReportText();
     discordModal.show();
@@ -1259,26 +1258,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
 
     let sections = [];
 
-    // 1. Wood Score
-    if (selectedCats.includes('wood')) {
-      const woodProp = isSeason ? 'currentSeason' : 'allTime';
-      const rows = sortByScore(cachedClanData.wood || [], woodProp);
-      const formatted = buildDiscordTable(rows, 'name', w => `${fmt(w[woodProp])}`);
-      sections.push(`🌲 **Wood Score Leaderboard** 🌲\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
-    }
-
-    // 2. Monster Leaderboard
-    if (selectedCats.includes('monster')) {
-      const rows = [...(cachedClanData.monster || [])].sort((a, b) => {
-        const valA = parseMonsterPts(isSeason ? a.currentSeasonText : a.allTimeText);
-        const valB = parseMonsterPts(isSeason ? b.currentSeasonText : b.allTimeText);
-        return valB - valA;
-      });
-      const formatted = buildDiscordTable(rows, 'name', m => `${cleanMonsterText(isSeason ? m.currentSeasonText : m.allTimeText)}`);
-      sections.push(`👹 **Monster Leaderboard** 👹\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
-    }
-
-    // 3. Battle Score Leaderboard
+    // 1. Battle Score
     if (selectedCats.includes('battle')) {
       const prop = isSeason ? 'currentSeasonScore' : 'allTimeScore';
       const rows = sortByScore(cachedClanData.battle || [], prop);
@@ -1286,7 +1266,26 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
       sections.push(`⚔️ **Battle Score Leaderboard** ⚔️\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
     }
 
-    // 4. Clan Island (Totem Update)
+    // 2. Unity Monument Contribution
+    if (selectedCats.includes('wood')) {
+      const woodProp = isSeason ? 'currentSeason' : 'allTime';
+      const rows = sortByScore(cachedClanData.wood || [], woodProp);
+      const formatted = buildDiscordTable(rows, 'name', w => `${fmt(w[woodProp])}`);
+      sections.push(`🏛️ **Unity Monument Contribution** 🏛️\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
+    }
+
+    // 3. Totem Contribution
+    if (selectedCats.includes('monster')) {
+      const rows = [...(cachedClanData.monster || [])].sort((a, b) => {
+        const valA = parseMonsterPts(isSeason ? a.currentSeasonText : a.allTimeText);
+        const valB = parseMonsterPts(isSeason ? b.currentSeasonText : b.allTimeText);
+        return valB - valA;
+      });
+      const formatted = buildDiscordTable(rows, 'name', m => `${cleanMonsterText(isSeason ? m.currentSeasonText : m.allTimeText)}`);
+      sections.push(`🗿 **Totem Contribution** 🗿\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
+    }
+
+    // 4. Totem Progress
     if (selectedCats.includes('island')) {
       const island = cachedClanData.islandProgress || {};
       const totems = [
@@ -1300,7 +1299,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
         { name: 'Boiúna', val: island.boiuna }
       ];
       const formattedTotems = buildDiscordTableTotems(totems);
-      sections.push(`🗿 **Totem Update** 🗿\n-# This week\n\`\`\`\n${formattedTotems}\n\`\`\``);
+      sections.push(`🗿 **Totem Progress** 🗿\n-# This week\n\`\`\`\n${formattedTotems}\n\`\`\``);
     }
 
     // Footer link
@@ -1312,8 +1311,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
   function buildDiscordTable(rows, nameProp, scoreGetter) {
     if (!rows.length) return 'No data available';
 
-    // Cari nama terpanjang untuk padding otomatis
-    let maxNameLen = 4; // Minimal panjang header 'Name'
+    let maxNameLen = 4;
     rows.forEach(r => {
       const nameStr = String(r[nameProp] || '');
       if (nameStr.length > maxNameLen) {
@@ -1468,7 +1466,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     });
 
     const breakdownContainer = document.getElementById('modal-monster-breakdown');
-    breakdownContainer.innerHTML = monsterPills.length > 0 ? monsterPills.join('') : '<span class="text-muted small">Tidak ada data monster</span>';
+    breakdownContainer.innerHTML = monsterPills.length > 0 ? monsterPills.join('') : '<span class="text-muted small">Tidak ada data kontribusi</span>';
 
     playerModal.show();
   }
@@ -1481,11 +1479,11 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
 
     const modeLabel = mode === 'alltime' ? 'All-Time' : (mode === 'season' ? 'Current Season' : 'Both');
     if (type === 'wood') {
-      document.getElementById('wood-table-title').innerHTML = `<i class="fa-solid fa-tree text-amber-700"></i> Wood Score Leaderboard - ${modeLabel}`;
+      document.getElementById('wood-table-title').innerHTML = `<i class="fa-solid fa-tree text-amber-700"></i> Unity Monument Leaderboard - ${modeLabel}`;
       renderWood();
     }
     if (type === 'monster') {
-      document.getElementById('monster-table-title').innerHTML = `<i class="fa-solid fa-ghost text-cyan-700"></i> Monster Score Leaderboard - ${modeLabel}`;
+      document.getElementById('monster-table-title').innerHTML = `<i class="fa-solid fa-ghost text-cyan-700"></i> Totem Contributions Leaderboard - ${modeLabel}`;
       renderMonster();
     }
     if (type === 'battle') {
@@ -1500,7 +1498,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     const showSeason = mode !== 'alltime';
 
     const headers = ['<th class="text-center">No</th>', '<th>Player Name</th>', '<th class="text-center">Tenure</th>'];
-    if (showAll) headers.push('<th class="text-end">All-Time Wood</th>');
+    if (showAll) headers.push('<th class="text-end">All-Time Monument</th>');
     if (showSeason) headers.push('<th class="text-end">Current Season</th>');
 
     document.getElementById('wood-head').innerHTML = `<tr>${headers.join('')}</tr>`;
@@ -1508,8 +1506,8 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     const mobileContainer = document.getElementById('mobile-wood-list');
 
     if (!source.length) {
-      document.getElementById('table-wood-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center">Tidak ada data wood</td></tr>`;
-      mobileContainer.innerHTML = '<div class="text-center text-muted py-3">Tidak ada data wood</div>';
+      document.getElementById('table-wood-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center">Tidak ada data unity monument</td></tr>`;
+      mobileContainer.innerHTML = '<div class="text-center text-muted py-3">Tidak ada data unity monument</div>';
       return;
     }
 
@@ -1537,8 +1535,8 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
           <span class="badge bg-slate-100 text-slate-600">${esc(w.tenure)}</span>
         </div>
         <div class="mobile-card-stats-grid">
-          ${showAll ? `<div class="mobile-stat-box"><span class="mobile-stat-label">All-Time</span><span class="mobile-stat-val text-amber-700">${fmt(w.allTime)} Wood</span></div>` : ''}
-          ${showSeason ? `<div class="mobile-stat-box"><span class="mobile-stat-label">Current Season</span><span class="mobile-stat-val">${fmt(w.currentSeason)} Wood</span></div>` : ''}
+          ${showAll ? `<div class="mobile-stat-box"><span class="mobile-stat-label">All-Time</span><span class="mobile-stat-val text-amber-700">${fmt(w.allTime)} Monument</span></div>` : ''}
+          ${showSeason ? `<div class="mobile-stat-box"><span class="mobile-stat-label">Current Season</span><span class="mobile-stat-val">${fmt(w.currentSeason)} Monument</span></div>` : ''}
         </div>
       </div>
     `).join('');
@@ -1559,8 +1557,8 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     const mobileContainer = document.getElementById('mobile-monster-list');
 
     if (!source.length) {
-      document.getElementById('table-monster-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center">Tidak ada data monster</td></tr>`;
-      mobileContainer.innerHTML = '<div class="text-center text-muted py-3">Tidak ada data monster</div>';
+      document.getElementById('table-monster-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center">Tidak ada data kontribusi totem</td></tr>`;
+      mobileContainer.innerHTML = '<div class="text-center text-muted py-3">Tidak ada data kontribusi totem</div>';
       return;
     }
 
@@ -1717,7 +1715,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
           ${playerCell(w.name, i, Number(w[woodProp])||0)}
         </div>
         <div class="overview-badge-container">
-          <span class="badge bg-amber-100 text-amber-800 border border-amber-300 fs-6">${fmt(w[woodProp])} Wood</span>
+          <span class="badge bg-amber-100 text-amber-800 border border-amber-300 fs-6">${fmt(w[woodProp])} Monument</span>
         </div>
       </div>`).join('') : '<div class="text-muted text-center py-3">Tidak ada data</div>';
 
