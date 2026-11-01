@@ -1242,7 +1242,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     islandModal.show();
   }
 
-  // --- DISCORD REPORT GENERATOR FUNCTIONS (URUTAN SESUAI PERMINTAAN) ---
+  // --- DISCORD REPORT GENERATOR FUNCTIONS (URUTAN & ATURAN BARU) ---
   function openDiscordReportModal() {
     generateDiscordReportText();
     discordModal.show();
@@ -1261,31 +1261,31 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     // 1. Battle Score
     if (selectedCats.includes('battle')) {
       const prop = isSeason ? 'currentSeasonScore' : 'allTimeScore';
-      const rows = sortByScore(cachedClanData.battle || [], prop);
+      const rows = sortByScore(cachedClanData.battle || [], prop).filter(b => (Number(b[prop]) || 0) > 0);
       const formatted = buildDiscordTable(rows, 'name', b => `${scoreText(isSeason ? b.currentSeasonText : b.allTimeText)}`);
-      sections.push(`⚔️ **Battle Score Leaderboard** ⚔️\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
+      sections.push(`**Battle Score Leaderboard**\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
     }
 
     // 2. Unity Monument Contribution
     if (selectedCats.includes('wood')) {
       const woodProp = isSeason ? 'currentSeason' : 'allTime';
-      const rows = sortByScore(cachedClanData.wood || [], woodProp);
+      const rows = sortByScore(cachedClanData.wood || [], woodProp).filter(w => (Number(w[woodProp]) || 0) > 0);
       const formatted = buildDiscordTable(rows, 'name', w => `${fmt(w[woodProp])}`);
-      sections.push(`🏛️ **Unity Monument Contribution** 🏛️\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
+      sections.push(`**Unity Monument Contribution**\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
     }
 
     // 3. Totem Contribution
     if (selectedCats.includes('monster')) {
-      const rows = [...(cachedClanData.monster || [])].sort((a, b) => {
-        const valA = parseMonsterPts(isSeason ? a.currentSeasonText : a.allTimeText);
-        const valB = parseMonsterPts(isSeason ? b.currentSeasonText : b.allTimeText);
-        return valB - valA;
-      });
+      const rows = [...(cachedClanData.monster || [])].map(m => {
+        const scoreVal = parseMonsterPts(isSeason ? m.currentSeasonText : m.allTimeText);
+        return { ...m, calcScore: scoreVal };
+      }).filter(m => m.calcScore > 0).sort((a, b) => b.calcScore - a.calcScore);
+
       const formatted = buildDiscordTable(rows, 'name', m => `${cleanMonsterText(isSeason ? m.currentSeasonText : m.allTimeText)}`);
-      sections.push(`🗿 **Totem Contribution** 🗿\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
+      sections.push(`**Totem Contribution**\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
     }
 
-    // 4. Totem Progress
+    // 4. Totem Progress (Dengan tanda ceklis jika 500/500)
     if (selectedCats.includes('island')) {
       const island = cachedClanData.islandProgress || {};
       const totems = [
@@ -1299,7 +1299,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
         { name: 'Boiúna', val: island.boiuna }
       ];
       const formattedTotems = buildDiscordTableTotems(totems);
-      sections.push(`🗿 **Totem Progress** 🗿\n-# This week\n\`\`\`\n${formattedTotems}\n\`\`\``);
+      sections.push(`**Totem Progress**\n-# This week\n\`\`\`\n${formattedTotems}\n\`\`\``);
     }
 
     // Footer link
@@ -1341,7 +1341,11 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     let lines = [];
     totems.forEach(t => {
       const nameStr = t.name.padEnd(maxNameLen, ' ');
-      const valStr = String(t.val || '-');
+      let valStr = String(t.val || '-').trim();
+      // Tambahkan ceklis jika sudah 500/500
+      if (valStr === '500/500') {
+        valStr = '500/500 ✔️';
+      }
       lines.push(`${nameStr} | ${valStr}`);
     });
 
