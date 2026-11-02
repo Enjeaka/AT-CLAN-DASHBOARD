@@ -1520,7 +1520,17 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     }
 
     const sortProp = mode === 'season' ? 'currentSeason' : 'allTime';
-    const rows = sortByScore(source, sortProp);
+    let rows = sortByScore(source, sortProp);
+
+    if (mode === 'season') {
+      rows = rows.filter(w => (Number(w.currentSeason) || 0) > 0);
+    }
+
+    if (!rows.length) {
+      document.getElementById('table-wood-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center text-muted py-4">No data yet</td></tr>`;
+      mobileContainer.innerHTML = '<div class="text-center text-muted py-4 fw-semibold">No data yet</div>';
+      return;
+    }
 
     document.getElementById('table-wood-body').innerHTML = rows.map((w,i) => {
       const seasonVal = Number(w.currentSeason) || 0;
@@ -1584,11 +1594,21 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
       sortKeyProp = 'allTimeText';
     }
 
-    const rows = [...source].sort((a, b) => {
+    let rows = [...source].sort((a, b) => {
       const valA = parseMonsterPts(a[sortKeyProp]);
       const valB = parseMonsterPts(b[sortKeyProp]);
       return valB - valA;
     });
+
+    if (mode === 'season') {
+      rows = rows.filter(m => parseMonsterPts(m.currentSeasonText) > 0);
+    }
+
+    if (!rows.length) {
+      document.getElementById('table-monster-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center text-muted py-4">No data yet</td></tr>`;
+      mobileContainer.innerHTML = '<div class="text-center text-muted py-4 fw-semibold">No data yet</div>';
+      return;
+    }
 
     document.getElementById('table-monster-body').innerHTML = rows.map((m,i) => {
       const allTimeNum = parseMonsterPts(m.allTimeText);
@@ -1650,7 +1670,17 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     }
 
     const prop = mode === 'season' ? 'currentSeasonScore' : 'allTimeScore';
-    const rows = sortByScore(source, prop);
+    let rows = sortByScore(source, prop);
+
+    if (mode === 'season') {
+      rows = rows.filter(b => (Number(b.currentSeasonScore) || 0) > 0);
+    }
+
+    if (!rows.length) {
+      document.getElementById('table-battle-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center text-muted py-4">No match yet</td></tr>`;
+      mobileContainer.innerHTML = '<div class="text-center text-muted py-4 fw-semibold">No match yet</div>';
+      return;
+    }
 
     document.getElementById('table-battle-body').innerHTML = rows.map((b,i) => {
       const seasonText = scoreText(b.currentSeasonText, 'battle');
