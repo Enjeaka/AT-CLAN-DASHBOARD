@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,19 +88,19 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
   border: none !important;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
   max-width: 950px;
   box-shadow: none !important;
 }
-.custom-nav-row { display: flex; gap: 8px; width: 100%; margin: 0; padding: 0; list-style: none; }
+.custom-nav-row { display: flex; gap: 6px; width: 100%; margin: 0; padding: 0; list-style: none; }
 .custom-nav-row .nav-item { flex: 1; min-width: 0; }
 .custom-nav-row .nav-link {
   color: #334155;
-  border-radius: 10px;
-  padding: 12px 4px;
+  border-radius: 8px;
+  padding: 10px 6px;
   font-weight: 700;
-  font-size: .85rem;
+  font-size: .8rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -108,7 +108,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 5px;
   background: #ffffff !important;
   border: 1px solid var(--border-color);
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -426,11 +426,11 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
   .desktop-view-only { display: none !important; }
   .mobile-view-only { display: block !important; }
 
-  .custom-nav-container { padding: 0; gap: 7px; }
-  .custom-nav-row { gap: 5px; }
-  .custom-nav-row .nav-link { font-size: .72rem; padding: 10px 2px; gap: 4px; }
+  .custom-nav-container { padding: 0; gap: 6px; }
+  .custom-nav-row { gap: 4px; }
+  .custom-nav-row .nav-link { font-size: .7rem; padding: 8px 2px; gap: 3px; }
   .filter-pills { gap: 1px; }
-  .btn-filter { font-size: .78rem; padding: 9px 11px; }
+  .btn-filter { font-size: .75rem; padding: 8px 10px; }
   .table-container { padding: 12px; }
   .modal-dialog-large { width: 96%; margin: 10px auto; }
 }
@@ -506,7 +506,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
           </div>
           <div class="sync-indicator">
             <span class="pulse-dot" id="sync-dot"></span>
-            <span id="sync-status">Menghubungkan...</span>
+            <span id="sync-status">Connecting...</span>
           </div>
         </div>
 
@@ -545,12 +545,12 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
             <ul class="custom-nav-row">
               <li class="nav-item">
                 <button class="nav-link" data-pane="wood-pane">
-                  <i class="fa-solid fa-tree"></i> Unity Monument
+                  <i class="fa-solid fa-tree"></i> Monument
                 </button>
               </li>
               <li class="nav-item">
                 <button class="nav-link" data-pane="monster-pane">
-                  <i class="fa-solid fa-ghost"></i> Totem Contributions
+                  <i class="fa-solid fa-ghost"></i> Totem Contrib
                 </button>
               </li>
               <li class="nav-item">
@@ -582,19 +582,19 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
             <div class="col-12 col-lg-10">
               <div class="table-container shadow-sm">
                 <h5 class="text-amber-700 fw-bold mb-3"><i class="fa-solid fa-trophy me-2"></i>Top 3 Unity Monument Contributors</h5>
-                <div id="overview-top-wood">Memuat data...</div>
+                <div id="overview-top-wood">Loading data...</div>
               </div>
             </div>
             <div class="col-12 col-lg-10">
               <div class="table-container shadow-sm">
                 <h5 class="text-cyan-700 fw-bold mb-3"><i class="fa-solid fa-skull me-2"></i>Top 3 Totem Contributors</h5>
-                <div id="overview-top-monster">Memuat data...</div>
+                <div id="overview-top-monster">Loading data...</div>
               </div>
             </div>
             <div class="col-12 col-lg-10">
               <div class="table-container shadow-sm">
                 <h5 class="text-emerald-700 fw-bold mb-3"><i class="fa-solid fa-crown me-2"></i>Top 3 Battle Scorers</h5>
-                <div id="overview-top-battle">Memuat data...</div>
+                <div id="overview-top-battle">Loading data...</div>
               </div>
             </div>
           </div>
@@ -691,7 +691,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
           <div class="table-container shadow-sm">
             <div class="latest-battle-card shadow-sm">
               <div class="latest-battle-title"><i class="fa-solid fa-trophy me-2"></i>Latest Battle Info</div>
-              <div class="battle-info-pills" id="latest-battle-info-container">Memuat data...</div>
+              <div class="battle-info-pills" id="latest-battle-info-container">Loading data...</div>
             </div>
             <div class="table-header-title-box">
               <div class="table-header-title" id="battle-table-title"><i class="fa-solid fa-fish-fins text-emerald-700"></i> Battle Score Leaderboard - Both</div>
@@ -783,7 +783,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
           <div class="stat-box mt-3 mb-0">
             <div class="stat-box-title text-cyan-700 mb-2"><i class="fa-solid fa-ghost"></i> Totem Contributions Detail</div>
             <div id="modal-monster-breakdown" class="d-flex flex-wrap gap-2">
-              <span class="text-muted small">Tidak ada data kontribusi</span>
+              <span class="text-muted small">No contribution data available</span>
             </div>
           </div>
         </div>
@@ -840,7 +840,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p class="text-slate-600 text-sm mb-3 fw-semibold">Pilih kategori laporan yang ingin dibuat:</p>
+          <p class="text-slate-600 text-sm mb-3 fw-semibold">Select report categories to include:</p>
           <div class="row g-2 mb-3">
             <div class="col-6 col-md-3">
               <div class="form-check p-3 bg-slate-50 border rounded-lg">
@@ -868,7 +868,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
             </div>
           </div>
 
-          <p class="text-slate-600 text-sm mb-2 fw-semibold">Pilih Periode Waktu:</p>
+          <p class="text-slate-600 text-sm mb-2 fw-semibold">Select Time Period:</p>
           <div class="d-flex gap-3 mb-4">
             <div class="form-check">
               <input class="form-check-input discord-time" type="radio" name="discordTime" id="timeSeason" value="season" checked>
@@ -1031,7 +1031,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
 
     requestPending = true;
     const syncStatus = document.getElementById('sync-status');
-    if (syncStatus) syncStatus.innerText = 'Menyinkronkan...';
+    if (syncStatus) syncStatus.innerText = 'Syncing...';
 
     fetch(APPS_SCRIPT_URL)
       .then(res => res.json())
@@ -1063,9 +1063,9 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
   }
 
   function handleFetchError(err) {
-    console.error('Gagal mengambil data:', err);
+    console.error('Fetch failed:', err);
     const syncStatus = document.getElementById('sync-status');
-    if (syncStatus) syncStatus.innerText = 'Sync Gagal';
+    if (syncStatus) syncStatus.innerText = 'Sync Failed';
     const syncDot = document.getElementById('sync-dot');
     if (syncDot) {
       syncDot.style.backgroundColor = '#e53935';
@@ -1135,8 +1135,10 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
   }
 
   function cleanMonsterText(val) {
-    if (val == null || val === '' || val === '-') return '-';
-    return String(val).replace(/pts\s+caught/gi, 'pts').replace(/\s+/g, ' ').trim();
+    if (val == null || val === '' || val === '-') return 'No data yet';
+    const cleaned = String(val).replace(/pts\s+caught/gi, 'pts').replace(/\s+/g, ' ').trim();
+    if (cleaned === '' || cleaned === '-' || cleaned === '0 pts' || cleaned === '0') return 'No data yet';
+    return cleaned;
   }
 
   function parseMonsterPts(val) {
@@ -1159,8 +1161,11 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     return n > 0 ? n.toLocaleString('en-US') : '';
   }
 
-  function scoreText(val) {
-    return val == null || val === '' ? '-' : esc(val);
+  function scoreText(val, mode = 'default') {
+    if (val == null || val === '' || val === '-' || val === '#N/A' || val === '0') {
+      return mode === 'battle' ? 'No match yet' : 'No data yet';
+    }
+    return esc(val);
   }
 
   function statusBadge(status) {
@@ -1242,7 +1247,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     islandModal.show();
   }
 
-  // --- DISCORD REPORT GENERATOR FUNCTIONS (URUTAN & ATURAN BARU) ---
+  // --- DISCORD REPORT GENERATOR FUNCTIONS ---
   function openDiscordReportModal() {
     generateDiscordReportText();
     discordModal.show();
@@ -1262,7 +1267,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     if (selectedCats.includes('battle')) {
       const prop = isSeason ? 'currentSeasonScore' : 'allTimeScore';
       const rows = sortByScore(cachedClanData.battle || [], prop).filter(b => (Number(b[prop]) || 0) > 0);
-      const formatted = buildDiscordTable(rows, 'name', b => `${scoreText(isSeason ? b.currentSeasonText : b.allTimeText)}`);
+      const formatted = buildDiscordTable(rows, 'name', b => `${scoreText(isSeason ? b.currentSeasonText : b.allTimeText, 'battle')}`);
       sections.push(`**Battle Score Leaderboard**\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
     }
 
@@ -1285,7 +1290,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
       sections.push(`**Totem Contribution**\n-# ${timeLabel}\n\`\`\`\n${formatted}\n\`\`\``);
     }
 
-    // 4. Totem Progress (Dengan tanda ceklis jika 500/500)
+    // 4. Totem Progress
     if (selectedCats.includes('island')) {
       const island = cachedClanData.islandProgress || {};
       const totems = [
@@ -1299,7 +1304,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
         { name: 'Boiúna', val: island.boiuna }
       ];
       const formattedTotems = buildDiscordTableTotems(totems);
-      sections.push(`**Totem Progress**\n-# All-Time Progress\n\`\`\`\n${formattedTotems}\n\`\`\``);
+      sections.push(`**Totem Progress**\n-# This week\n\`\`\`\n${formattedTotems}\n\`\`\``);
     }
 
     // Footer link
@@ -1342,7 +1347,6 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     totems.forEach(t => {
       const nameStr = t.name.padEnd(maxNameLen, ' ');
       let valStr = String(t.val || '-').trim();
-      // Tambahkan ceklis jika sudah 500/500
       if (valStr === '500/500') {
         valStr = '500/500 ✔️';
       }
@@ -1368,7 +1372,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
         btn.classList.add('btn-primary');
       }, 2000);
     }).catch(err => {
-      console.error('Gagal menyalin teks:', err);
+      console.error('Failed to copy text:', err);
     });
   }
 
@@ -1378,8 +1382,8 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     const mobileContainer = document.getElementById('mobile-member-list');
 
     if (!members.length) {
-      body.innerHTML = '<tr><td colspan="6" class="text-center">Tidak ada data member</td></tr>';
-      mobileContainer.innerHTML = '<div class="text-center text-muted py-3">Tidak ada data member</div>';
+      body.innerHTML = '<tr><td colspan="6" class="text-center">No member data available</td></tr>';
+      mobileContainer.innerHTML = '<div class="text-center text-muted py-3">No member data available</div>';
       return;
     }
 
@@ -1443,10 +1447,10 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     document.getElementById('modal-unlocked-maps').innerText = memberData.unlockedMaps || '-';
 
     document.getElementById('modal-wood-alltime').innerText = fmt(woodData.allTime || 0);
-    document.getElementById('modal-wood-season').innerText = fmt(woodData.currentSeason || 0);
+    document.getElementById('modal-wood-season').innerText = woodData.currentSeason > 0 ? fmt(woodData.currentSeason) : 'No data yet';
 
     document.getElementById('modal-battle-alltime').innerText = scoreText(battleData.allTimeText);
-    document.getElementById('modal-battle-season').innerText = scoreText(battleData.currentSeasonText);
+    document.getElementById('modal-battle-season').innerText = scoreText(battleData.currentSeasonText, 'battle');
 
     document.getElementById('modal-monster-alltime').innerText = esc(cleanMonsterText(monsterData.allTimeText));
     document.getElementById('modal-monster-season').innerText = esc(cleanMonsterText(monsterData.currentSeasonText));
@@ -1470,7 +1474,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     });
 
     const breakdownContainer = document.getElementById('modal-monster-breakdown');
-    breakdownContainer.innerHTML = monsterPills.length > 0 ? monsterPills.join('') : '<span class="text-muted small">Tidak ada data kontribusi</span>';
+    breakdownContainer.innerHTML = monsterPills.length > 0 ? monsterPills.join('') : '<span class="text-muted small">No contribution data available</span>';
 
     playerModal.show();
   }
@@ -1510,8 +1514,8 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     const mobileContainer = document.getElementById('mobile-wood-list');
 
     if (!source.length) {
-      document.getElementById('table-wood-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center">Tidak ada data unity monument</td></tr>`;
-      mobileContainer.innerHTML = '<div class="text-center text-muted py-3">Tidak ada data unity monument</div>';
+      document.getElementById('table-wood-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center">No unity monument data available</td></tr>`;
+      mobileContainer.innerHTML = '<div class="text-center text-muted py-3">No unity monument data available</div>';
       return;
     }
 
@@ -1519,31 +1523,38 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     const rows = sortByScore(source, sortProp);
 
     document.getElementById('table-wood-body').innerHTML = rows.map((w,i) => {
+      const seasonVal = Number(w.currentSeason) || 0;
+      const seasonDisplay = seasonVal > 0 ? `${fmt(seasonVal)} Monument` : 'No data yet';
+
       const cells = [
         `<td class="text-center text-slate-500">${i+1}</td>`,
         `<td>${playerCell(w.name,i,Number(w[sortProp])||0)}</td>`,
         `<td class="text-center">${esc(w.tenure)}</td>`
       ];
       if (showAll) cells.push(`<td class="text-end text-amber-700 fw-bold">${fmt(w.allTime)}</td>`);
-      if (showSeason) cells.push(`<td class="text-end fw-semibold">${fmt(w.currentSeason)}</td>`);
+      if (showSeason) cells.push(`<td class="text-end fw-semibold">${seasonDisplay}</td>`);
       return `<tr>${cells.join('')}</tr>`;
     }).join('');
 
-    mobileContainer.innerHTML = rows.map((w,i) => `
-      <div class="mobile-card-item">
-        <div class="mobile-card-header">
-          <div class="mobile-card-player" onclick="openPlayerModal('${esc(w.name)}')">
-            <span class="text-slate-400 font-monospace">#${i+1}</span>
-            ${playerCell(w.name,i,Number(w[sortProp])||0)}
+    mobileContainer.innerHTML = rows.map((w,i) => {
+      const seasonVal = Number(w.currentSeason) || 0;
+      const seasonDisplay = seasonVal > 0 ? `${fmt(seasonVal)} Monument` : 'No data yet';
+      return `
+        <div class="mobile-card-item">
+          <div class="mobile-card-header">
+            <div class="mobile-card-player" onclick="openPlayerModal('${esc(w.name)}')">
+              <span class="text-slate-400 font-monospace">#${i+1}</span>
+              ${playerCell(w.name,i,Number(w[sortProp])||0)}
+            </div>
+            <span class="badge bg-slate-100 text-slate-600">${esc(w.tenure)}</span>
           </div>
-          <span class="badge bg-slate-100 text-slate-600">${esc(w.tenure)}</span>
+          <div class="mobile-card-stats-grid">
+            ${showAll ? `<div class="mobile-stat-box"><span class="mobile-stat-label">All-Time</span><span class="mobile-stat-val text-amber-700">${fmt(w.allTime)} Monument</span></div>` : ''}
+            ${showSeason ? `<div class="mobile-stat-box"><span class="mobile-stat-label">Current Season</span><span class="mobile-stat-val">${seasonDisplay}</span></div>` : ''}
+          </div>
         </div>
-        <div class="mobile-card-stats-grid">
-          ${showAll ? `<div class="mobile-stat-box"><span class="mobile-stat-label">All-Time</span><span class="mobile-stat-val text-amber-700">${fmt(w.allTime)} Monument</span></div>` : ''}
-          ${showSeason ? `<div class="mobile-stat-box"><span class="mobile-stat-label">Current Season</span><span class="mobile-stat-val">${fmt(w.currentSeason)} Monument</span></div>` : ''}
-        </div>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   }
 
   function renderMonster() {
@@ -1561,8 +1572,8 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     const mobileContainer = document.getElementById('mobile-monster-list');
 
     if (!source.length) {
-      document.getElementById('table-monster-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center">Tidak ada data kontribusi totem</td></tr>`;
-      mobileContainer.innerHTML = '<div class="text-center text-muted py-3">Tidak ada data kontribusi totem</div>';
+      document.getElementById('table-monster-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center">No totem contribution data available</td></tr>`;
+      mobileContainer.innerHTML = '<div class="text-center text-muted py-3">No totem contribution data available</div>';
       return;
     }
 
@@ -1581,13 +1592,15 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
 
     document.getElementById('table-monster-body').innerHTML = rows.map((m,i) => {
       const allTimeNum = parseMonsterPts(m.allTimeText);
+      const seasonText = cleanMonsterText(m.currentSeasonText);
+
       const cells = [
         `<td class="text-center text-slate-500">${i+1}</td>`,
         `<td>${playerCell(m.name,i,allTimeNum)}</td>`,
         `<td class="text-center">${esc(m.tenure)}</td>`
       ];
       if (showAll) cells.push(`<td class="text-end text-cyan-700 fw-bold">${esc(cleanMonsterText(m.allTimeText))}</td>`);
-      if (showSeason) cells.push(`<td class="text-end fw-semibold">${esc(cleanMonsterText(m.currentSeasonText))}</td>`);
+      if (showSeason) cells.push(`<td class="text-end fw-semibold">${seasonText}</td>`);
       MONSTER_COLUMNS.forEach(col => {
         const value = mode === 'season' ? m[col.seasonKey] : m[col.key];
         cells.push(`<td class="text-center">${fmtMonsterVal(value)}</td>`);
@@ -1597,6 +1610,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
 
     mobileContainer.innerHTML = rows.map((m,i) => {
       const allTimeNum = parseMonsterPts(m.allTimeText);
+      const seasonText = cleanMonsterText(m.currentSeasonText);
       return `
         <div class="mobile-card-item">
           <div class="mobile-card-header">
@@ -1608,7 +1622,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
           </div>
           <div class="mobile-card-stats-grid">
             ${showAll ? `<div class="mobile-stat-box" style="grid-column: span 2;"><span class="mobile-stat-label">All-Time</span><span class="mobile-stat-val text-cyan-700">${esc(cleanMonsterText(m.allTimeText))}</span></div>` : ''}
-            ${showSeason ? `<div class="mobile-stat-box" style="grid-column: span 2;"><span class="mobile-stat-label">Current Season</span><span class="mobile-stat-val">${esc(cleanMonsterText(m.currentSeasonText))}</span></div>` : ''}
+            ${showSeason ? `<div class="mobile-stat-box" style="grid-column: span 2;"><span class="mobile-stat-label">Current Season</span><span class="mobile-stat-val">${seasonText}</span></div>` : ''}
           </div>
         </div>
       `;
@@ -1630,8 +1644,8 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     const mobileContainer = document.getElementById('mobile-battle-list');
 
     if (!source.length) {
-      document.getElementById('table-battle-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center">Tidak ada data battle</td></tr>`;
-      mobileContainer.innerHTML = '<div class="text-center text-muted py-3">Tidak ada data battle</div>';
+      document.getElementById('table-battle-body').innerHTML = `<tr><td colspan="${headers.length}" class="text-center">No battle data available</td></tr>`;
+      mobileContainer.innerHTML = '<div class="text-center text-muted py-3">No battle data available</div>';
       return;
     }
 
@@ -1639,42 +1653,49 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
     const rows = sortByScore(source, prop);
 
     document.getElementById('table-battle-body').innerHTML = rows.map((b,i) => {
+      const seasonText = scoreText(b.currentSeasonText, 'battle');
+      const currentBattleText = scoreText(b.currentBattle, 'battle');
+
       const cells = [
         `<td class="text-center text-slate-500">${i+1}</td>`,
         `<td>${playerCell(b.name,i,Number(b[prop])||0)}</td>`,
         `<td class="text-center">${esc(b.tenure)}</td>`
       ];
-      if (showAll) cells.push(`<td class="text-end">${scoreText(b.allTimeText)}</td>`);
-      if (showSeason) cells.push(`<td class="text-end">${scoreText(b.currentSeasonText)}</td>`);
-      cells.push(`<td class="text-end cell-current-battle">${scoreText(b.currentBattle)}</td>`);
+      if (showAll) cells.push(`<td class="text-end">${scoreText(b.allTimeText, 'battle')}</td>`);
+      if (showSeason) cells.push(`<td class="text-end">${seasonText}</td>`);
+      cells.push(`<td class="text-end cell-current-battle">${currentBattleText}</td>`);
       return `<tr>${cells.join('')}</tr>`;
     }).join('');
 
-    mobileContainer.innerHTML = rows.map((b,i) => `
-      <div class="mobile-card-item">
-        <div class="mobile-card-header">
-          <div class="mobile-card-player" onclick="openPlayerModal('${esc(b.name)}')">
-            <span class="text-slate-400 font-monospace">#${i+1}</span>
-            ${playerCell(b.name,i,Number(b[prop])||0)}
+    mobileContainer.innerHTML = rows.map((b,i) => {
+      const seasonText = scoreText(b.currentSeasonText, 'battle');
+      const currentBattleText = scoreText(b.currentBattle, 'battle');
+      return `
+        <div class="mobile-card-item">
+          <div class="mobile-card-header">
+            <div class="mobile-card-player" onclick="openPlayerModal('${esc(b.name)}')">
+              <span class="text-slate-400 font-monospace">#${i+1}</span>
+              ${playerCell(b.name,i,Number(b[prop])||0)}
+            </div>
+            <span class="badge bg-slate-100 text-slate-600">${esc(b.tenure)}</span>
           </div>
-          <span class="badge bg-slate-100 text-slate-600">${esc(b.tenure)}</span>
-        </div>
-        <div class="mobile-card-stats-grid">
-          ${showAll ? `<div class="mobile-stat-box"><span class="mobile-stat-label">All-Time</span><span class="mobile-stat-val text-emerald-700">${scoreText(b.allTimeText)}</span></div>` : ''}
-          ${showSeason ? `<div class="mobile-stat-box"><span class="mobile-stat-label">Current Season</span><span class="mobile-stat-val">${scoreText(b.currentSeasonText)}</span></div>` : ''}
-          <div class="mobile-stat-box" style="grid-column: span 2;">
-            <span class="mobile-stat-label">Current Battle</span>
-            <span class="mobile-stat-val text-emerald-600">${scoreText(b.currentBattle)}</span>
+          <div class="mobile-card-stats-grid">
+            ${showAll ? `<div class="mobile-stat-box"><span class="mobile-stat-label">All-Time</span><span class="mobile-stat-val text-emerald-700">${scoreText(b.allTimeText, 'battle')}</span></div>` : ''}
+            ${showSeason ? `<div class="mobile-stat-box"><span class="mobile-stat-label">Current Season</span><span class="mobile-stat-val">${seasonText}</span></div>` : ''}
+            <div class="mobile-stat-box" style="grid-column: span 2;">
+              <span class="mobile-stat-label">Current Battle</span>
+              <span class="mobile-stat-val text-emerald-600">${currentBattleText}</span>
+            </div>
           </div>
         </div>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   }
 
   function renderLatestBattle(infos) {
     const container = document.getElementById('latest-battle-info-container');
-    if (!infos.length) {
-      container.innerHTML = '<span class="text-muted small">Tidak ada informasi battle terbaru</span>';
+    if (!infos || !infos.length) {
+      container.innerHTML = '<span class="text-muted small">No recent battle information available</span>';
       return;
     }
 
@@ -1685,6 +1706,9 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
 
     container.innerHTML = infos.map(info => {
       const text = String(info);
+      if (text === '#N/A' || text === '-' || text === '') {
+        return `<div class="battle-info-pill"><i class="fa-solid fa-circle-info me-1" style="color:var(--clan-accent)"></i>No match yet</div>`;
+      }
       const low = text.toLowerCase();
       let icon = 'fa-circle-info';
       if (low.includes('opp')) icon = 'fa-shield-halved';
@@ -1721,7 +1745,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
         <div class="overview-badge-container">
           <span class="badge bg-amber-100 text-amber-800 border border-amber-300 fs-6">${fmt(w[woodProp])} Monument</span>
         </div>
-      </div>`).join('') : '<div class="text-muted text-center py-3">Tidak ada data</div>';
+      </div>`).join('') : '<div class="text-muted text-center py-3">No data yet</div>';
 
     const monsterRows = (cachedClanData.monster || []).map(m => ({
       name: m.name,
@@ -1738,7 +1762,7 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
         <div class="overview-badge-container">
           <span class="badge bg-cyan-100 text-cyan-800 border border-cyan-300 fs-6">${scoreText(m.text)}</span>
         </div>
-      </div>`).join('') : '<div class="text-muted text-center py-3">Tidak ada data</div>';
+      </div>`).join('') : '<div class="text-muted text-center py-3">No data yet</div>';
 
     const battleRows = (cachedClanData.battle || []).map(b => ({
       name: b.name,
@@ -1753,9 +1777,9 @@ body[data-clan="AT5"] { --clan-accent: #b45309; }
           ${playerCell(b.name, i, Number(b.score)||0)}
         </div>
         <div class="overview-badge-container">
-          <span class="badge bg-emerald-100 text-emerald-800 border border-emerald-300 fs-6">${scoreText(b.text)}</span>
+          <span class="badge bg-emerald-100 text-emerald-800 border border-emerald-300 fs-6">${scoreText(b.text, 'battle')}</span>
         </div>
-      </div>`).join('') : '<div class="text-muted text-center py-3">Tidak ada data</div>';
+      </div>`).join('') : '<div class="text-muted text-center py-3">No data yet</div>';
   }
   </script>
 </body>
